@@ -5,16 +5,14 @@ public class Question5 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner s=new Scanner(System.in);
-		char ch=s.next().charAt(0);
-		if((ch>='a' && ch<='z') || (ch>='A' && ch<='Z')){
-			System.out.println("Alphabet");
-		}
-		else if(ch>='0'&& ch<='9') {
-			System.out.println("Number");
+		int n=s.nextInt();
+		if(n%2==0) {
+			System.out.println("Even");
 		}
 		else {
-			System.out.println("Special Character");
+			System.out.println("Odd");
 		}
+
 	}
 
 }

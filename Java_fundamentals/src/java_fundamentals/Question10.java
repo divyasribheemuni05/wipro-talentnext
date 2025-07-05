@@ -1,19 +1,22 @@
 package java_fundamentals;
-import java.util.*;
+
+import java.util.Scanner;
+
 public class Question10 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner s= new Scanner(System.in);
-		int n=s.nextInt();
-		int re=0;
-		while(n!=0) {
-			int d=n%10;
-			re=re*10+d;
-			n=n/10;
-			
-		}
-		System.out.println(re);
-	}
+        System.out.print("Enter a character: ");
+        char ch = sc.next().charAt(0);
 
+        if (ch >= 'a' && ch <= 'z') {
+            ch = (char)(ch - 32);
+            System.out.println("Uppercase: " + ch);
+        } else if (ch >= 'A' && ch <= 'Z') {
+            ch = (char)(ch + 32);
+            System.out.println("Lowercase: " + ch);
+        } else {
+            System.out.println("Not an alphabet character");
+        }
+    }
 }

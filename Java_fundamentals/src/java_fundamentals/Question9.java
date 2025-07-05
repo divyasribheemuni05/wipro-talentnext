@@ -1,19 +1,32 @@
 package java_fundamentals;
-import java.util.*;
+
+import java.util.Scanner;
+
 public class Question9 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String gender = scanner.nextLine().trim();
+        System.out.print("Enter age: ");
+        int age = scanner.nextInt();
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner s=new Scanner(System.in);
-		int n=s.nextInt();
-		int sum=0;
-		while(n>0) {
-			int d=n%10;
-			sum=sum+d;
-			n=n/10;
-		}
-		System.out.println(sum);
+        if (age < 1 || age > 100) {
+            System.out.println("Error: Age must be between 1 and 100.");
+        } else if (gender.equalsIgnoreCase("Female")) {
+            if (age >= 1 && age <= 58) {
+                System.out.println("Interest rate: 8.2%");
+            } else {
+                System.out.println("Interest rate: 9.2%");
+            }
+        } else if (gender.equalsIgnoreCase("Male")) {
+            if (age >= 1 && age <= 58) {
+                System.out.println("Interest rate: 8.4%");
+            } else {
+                System.out.println("Interest rate: 10.5%");
+            }
+        } else {
+            System.out.println("Error: Gender must be 'Male' or 'Female'.");
+        }
 
-	}
-
+        scanner.close();
+    }
 }
