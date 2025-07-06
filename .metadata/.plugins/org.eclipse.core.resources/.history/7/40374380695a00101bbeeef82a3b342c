@@ -1,0 +1,23 @@
+package java_fundamentasArrays;
+import java.util.*;
+public class Question12 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s= new Scanner(System.in);
+		int arr[]=new int[3];
+		int brr[]=new int[3];
+		int re[]=new int[2];
+		for(int i=0;i<3;i++) {
+			arr[i]=s.nextInt();
+			brr[i]=s.nextInt();
+		}
+		re[0]=arr[1];
+		re[1]=brr[1];
+			System.out.println(re[0]+" "+re[1]);
+		
+			
+		}
+}
+
+
