@@ -1,0 +1,17 @@
+package java_oops;
+import java.util.*;
+public class Question9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		String s1=sc.nextLine();
+		String s2=sc.nextLine();
+		if(Character.toLowerCase(s1.charAt(s1.length()-1))==Character.toLowerCase(s2.charAt(0))) {
+			System.out.println(s1.substring(0, s1.length()-1).concat(s2).toLowerCase());
+		}
+		else
+		System.out.println(s1.concat(" "+s2).toLowerCase());
+	}
+
+}
